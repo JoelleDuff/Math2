@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="TOC">
+<ul>
+<li><a href="#/assignment-from-seminar-economics-and-psychology-of-risk-and-time">Assignment from Seminar Economics and Psychology of Risk and Time</a></li>
+</ul>
+</section>
+
+<section><section id="assignment-from-seminar-economics-and-psychology-of-risk-and-time" class="titleslide slide level1"><h1>Assignment from Seminar Economics and Psychology of Risk and Time</h1></section><section class="slide level2">
+
+<p>When choosing between uncertain alternatives, Mary maximizes cumulative prospect theory with a weighting (“source”) function for a ball drawn from an urn with a known composition of balls <span class="math inline">\(K\)</span> equal to the weighting function for the performance of the Dow Jones index, both given by:</p>
+<p><span class="math display">\[w_K(p) = w_{DOW}(p) = p^2\]</span></p>
+<p>The weighting function for balls drawn from an urn with an unknown composition of coloured balls <span class="math inline">\(U\)</span>, as well as the weighting function for the performance of the AEX index are given by:</p>
+<p><span class="math display">\[w_U(p) = w_{AEX}(p) = p^{0.5}/(p^{0.5}+(1-p)^{0.5})^2)\]</span></p>
+<p>Mary’s utility function is <span class="math inline">\(u(x) = x^{0.88}\)</span>.</p>
+</section><section id="part-a" class="slide level2">
+<h1>Part a</h1>
+<p><em>Show that Mary can be ambiguity seeking for unlikely events and ambiguity averse for events of moderate likelihood when comparing lotteries with prizes depending on balls drawn from either the risky or the unknown urn.</em></p>
+<figure>
+<img src="image1.png" alt="Table 1" /><figcaption>Table 1</figcaption>
+</figure>
+<p>The points from the table above create the following graph:</p>
+<figure>
+<img src="image.jpg" alt="Graph" /><figcaption>Graph</figcaption>
+</figure>
+<p>As we can see in unlikely events (when <span class="math inline">\(p&lt;0.6\)</span>), Mary chooses the unknown composition, meaning that she is ambiguity seeking. For events with moderate or high probability (when <span class="math inline">\(p&gt;0.6\)</span>) Mary is ambiguity averse by preferring the known composition.</p>
+</section><section id="part-b" class="slide level2">
+<h1>Part b</h1>
+<p><em>Show that Mary can exhibit the home bias, assuming that she believes that the Dow Jones index and the AEX index will go up (and down) with probability 0.5.</em></p>
+<h5 id="dow-jones-index-increases">Dow Jones Index increases</h5>
+<figure>
+<img src="image2.png" />
+</figure>
+<h6 id="cptdow-jones-0.25x0.88">CPT(Dow Jones) = <span class="math inline">\(0.25*x^{0.88}\)</span></h6>
+<h5 id="aex-index-increases">AEX Index increases</h5>
+<figure>
+<img src="image3.png" />
+</figure>
+<h6 id="cptaex-0.3536x0.88">CPT(AEX) = <span class="math inline">\(0.3536*x^{0.88}\)</span></h6>
+<p>In the event that Mary gets and equal, positive payoff if any of the indexes increases, she will always prefer the AEX index. This demonstrates the home bias for Mary.</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
