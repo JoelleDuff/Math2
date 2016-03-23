@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="-s" type="text/css" />
+</head>
+<body>
+<h1 id="assignment-from-seminar-economics-and-psychology-of-risk-and-time">Assignment from Seminar Economics and Psychology of Risk and Time</h1>
+<p>When choosing between uncertain alternatives, Mary maximizes cumulative prospect theory with a weighting (“source”) function for a ball drawn from an urn with a known composition of balls <span class="math inline"><em>K</em></span> equal to the weighting function for the performance of the Dow Jones index, both given by: <br /><span class="math display"><em>w</em><sub><em>K</em></sub>(<em>p</em>)=<em>w</em><sub><em>D</em><em>O</em><em>W</em></sub>(<em>p</em>)=<em>p</em><sup>2</sup></span><br /></p>
+<p>The weighting function for balls drawn from an urn with an unknown composition of colored balls <span class="math inline"><em>U</em></span>, as well as the weighting function for the performance of the AEX index are given by: <br /><span class="math display">$$w_U(p) = w_{AEX}(p) = \frac{p^{0.5}}{(p^{0.5}+(1-p)^{0.5})^2}$$</span><br /></p>
+<p>Mary’s utility function is <span class="math inline"><em>u</em>(<em>x</em>)=<em>x</em><sup>0.88</sup></span>.</p>
+<p><em>a) Show that Mary can be ambiguity seeking for unlikely events and ambiguity averse for events of moderate likelihood when comparing lotteries with prizes depending on balls drawn from either the risky or the unknown urn.</em></p>
+<pre><code>$p$     0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+$w_K$   &amp;0  &amp;0.01   &amp;0.04   &amp;0.09   &amp;0.16   &amp;0.25   &amp;0.36   &amp;0.49   &amp;0.64   &amp;0.81   &amp;1\\ \hline
+$w_U$   &amp;0  &amp;0.1976 &amp;0.2485 &amp;0.2858 &amp;0.3195 &amp;0.3536 &amp;0.3912 &amp;0.4366 &amp;0.4969 &amp;0.5929 &amp;1\\ \hline</code></pre>
+<p>The points from the table above create the following graph:</p>
+<div class="figure">
+<img src="C:/Github/New/image.jpg" alt="Graph" />
+<p class="caption">Graph</p>
+</div>
+<p>As we can see in unlikely events (when <span class="math inline"><em>p</em> &lt; 0.6</span>), Mary chooses the unknown composition, meaning that she is ambiguity seeking. For events with moderate or high probability (when <span class="math inline"><em>p</em> &gt; 0.6</span>) Mary is ambiguity averse by preferring the known composition.</p>
+<p><em>b) Show that Mary can exhibit the home bias, assuming that she believes that the Dow Jones index and the AEX index will go up (and down) with probability 0.5.</em></p>
+<p>Dow Jones Index increases</p>
+<pre><code>Function    &amp;$p$    &amp;$\pi$          &amp;$U(x)$     &amp;$\pi U(x)$\\ \hline
+Outcome     &amp;0.5    &amp;$w(0.5)=0.25$  &amp;$x^{0.88}$ &amp;$0.25*x^{0.88}$</code></pre>
+<p>CPT(Dow Jones) = <span class="math inline">0.25 * <em>x</em><sup>0.88</sup></span></p>
+<p>AEX Index increases</p>
+<pre><code>Function    &amp;$p$    &amp;$\pi$              &amp;$U(x)$     &amp;$\pi U(x)$
+Outcome     &amp;0.5    &amp;$w(0.5)=0.3536$    &amp;$x^{0.88}$ &amp;$0.3536*x^{0.88}$  </code></pre>
+<p>CPT(AEX) = <span class="math inline">0.3536 * <em>x</em><sup>0.88</sup></span></p>
+<p>In the event that Mary gets and equal, positive payoff if any of the indexes increases, she will always prefer the AEX index. This demonstrates the home bias for Mary.</p>
+<p>/* Buttondown A Markdown/MultiMarkdown/Pandoc HTML output CSS stylesheet Author: Ryan Gray Date: 15 Feb 2011 Revised: 21 Feb 2012</p>
+<pre><code>General style is clean, with minimal re-definition of the defaults. It also 
+contains built-in print optimizations. 
+
+All elements that Pandoc and MultiMarkdown use should be listed here, even 
+if the style is empty so you can easily add styling to anything.
+
+There are some elements in here for HTML5 output of Pandoc, but I have not 
+gotten around to testing that yet.</code></pre>
+<p>*/</p>
+<p>/* NOTES:</p>
+<pre><code>Stuff tried and failed:
+
+It seems that specifying font-family:serif in Safari will always use 
+Times New Roman rather than the user&#39;s preferences setting.
+
+Making the font size different or a fixed value for print in case the screen 
+font size is making the print font too big: Making font-size different for 
+print than for screen causes horizontal lines to disappear in math when using 
+MathJax under Safari.</code></pre>
+<p>*/</p>
+<p>/* ---- Front Matter ---- */</p>
+<p>/* Pandoc header DIV. Contains .title, .author and .date. Comes before div#TOC. Only appears if one of those three are in the document. */</p>
+<p>div#header, header { /* Put border on bottom. Separates it from TOC or body that comes after it. */ border-bottom: 1px solid #aaa; margin-bottom: 0.5em; }</p>
+<p>.title /* Pandoc title header (h1.title) */ { text-align: center; }</p>
+<p>.author, .date /* Pandoc author(s) and date headers (h2.author and h3.date) */ { text-align: center; }</p>
+<p>/* Pandoc table of contents DIV when using the --toc option. NOTE: this doesn't support Pandoc's --id-prefix option for #TOC and #header. Probably would need to use div[id$='TOC'] and div[id$='header'] as selectors. */</p>
+<p>div#TOC, nav#TOC { /* Put border on bottom to separate it from body. */ border-bottom: 1px solid #aaa; margin-bottom: 0.5em; }</p>
+<p><span class="citation">@media</span> print { div#TOC, nav#TOC { /* Don't display TOC in print */ display: none; } }</p>
+<p>/* ---- Headers and sections ---- */</p>
+<p>h1, h2, h3, h4, h5, h6 { font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Liberation Sans&quot;, Calibri, Arial, sans-serif; /* Sans-serif headers */</p>
+<pre><code>/* font-family: &quot;Liberation Serif&quot;, &quot;Georgia&quot;, &quot;Times New Roman&quot;, serif; /* Serif headers */
+
+page-break-after: avoid; /* Firefox, Chrome, and Safari do not support the property value &quot;avoid&quot; */
+}</code></pre>
+<p>/* Pandoc with --section-divs option */</p>
+<p>div div, section section /* Nested sections <em>/ { margin-left: 1.5em; /</em> This will increasingly indent nested header sections. 1.5 Keep it in line with bullet indent of parent section */ }</p>
+<p>p {}</p>
+<p>blockquote { font-style: italic; }</p>
+<p>li /* All list items */ { }</p>
+li &gt; p /* Loosely spaced list item <em>/ { margin-top: 1em; /</em> For IE's lack of space above a
+<li>
+when the item is inside a
+<p>
+<p>*/ }</p>
+<p>ul /* Whole unordered list */ { }</p>
+<p>ul li /* Unordered list item */ { }</p>
+<p>ol /* Whole ordered list */ { }</p>
+<p>ol li /* Ordered list item */ { }</p>
+<p>hr /* Simple line for normal rules */ { border: none; height: 1pt; background: none; border-top: 1pt solid #333; }</p>
+<p>/* ---- Some span elements --- */</p>
+<p>sub /* Subscripts. Pandoc: H<sub>2</sub>O */ { }</p>
+<p>sup /* Superscripts. Pandoc: The 2<sup>nd</sup> try. */ { }</p>
+<p>em /* Emphasis. Markdown: <em>emphasis</em> or <em>emphasis</em> */ { }</p>
+<p>em &gt; em /* Emphasis within emphasis: <em>This is all </em>emphasized* except that* */ { font-style: normal; }</p>
+<p>strong /* Markdown <strong>strong</strong> or <strong>strong</strong> */ { }</p>
+<p>/* ---- Links (anchors) ---- */</p>
+<p>a /* All links <em>/ { /</em> Keep links clean. On screen, they are colored; in print, they do nothing anyway. */ text-decoration: none; }</p>
+<p><span class="citation">@media</span> screen { a:hover { /* On hover, we indicate a bit more that it is a link. */ text-decoration: underline; } }</p>
+<p><span class="citation">@media</span> print { a { /* In print, a colored link is useless, so un-style it. */ color: black; background: transparent; }</p>
+<pre><code>a[href^=&quot;http://&quot;]:after, a[href^=&quot;https://&quot;]:after
+    {
+    /* However, links that go somewhere else, might be useful to the reader,
+       so for http and https links, print the URL after what was the link 
+       text in parens
+    */
+    content: &quot; (&quot; attr(href) &quot;) &quot;;
+    font-size: 90%;
+    }
+}</code></pre>
+<p>/* ---- Images ---- */</p>
+<p>img { /* Let it be inline left/right where it wants to be, but verticality make it in the middle to look nicer, but opinions differ, and if in a multi-line paragraph, it might not be so great. */ vertical-align: middle; }</p>
+<p>div.figure /* Pandoc figure-style image <em>/ { /</em> Center the image and caption */ margin-left: auto; margin-right: auto; text-align: center; font-style: italic; font-size: small; }</p>
+<p>p.caption /* Pandoc figure-style caption within div.figure <em>/ { /</em> Inherits div.figure props by default */ }</p>
+<p>/* ---- Code blocks and spans ---- */</p>
+<p>pre, code { /* Preserve whitespace, but allow word wrapping */ white-space: pre-wrap; word-wrap: break-word; }</p>
+<p>/* Coloring */</p>
+<p>/* This will be only for code spans */ code { background-color: #F4F4F4; }</p>
+<p>/* This will be only for code blocks */ pre, pre &gt; code { background-color: #F4F4F4; }</p>
+<p>pre /* Code blocks <em>/ { /</em> Distinguish pre blocks from other text by more than the font with a background tint. <em>/ padding: 0.5em; /</em> Since we have a background color <em>/ border-radius: 5px; /</em> Softens it <em>/ /</em> Give it a some definition, and if printing doesn't print the background <em>/ border: 1px solid #aaa; /</em> Set it off left and right, seems to look a bit nicer when we have a background */ margin-left: 0.5em; margin-right: 0.5em; }</p>
+<p><span class="citation">@media</span> screen { pre { /* Shadow on screen instead of border */ border: none; box-shadow: inset 1px 1px 3px #bbb; }</p>
+<pre><code>pre, pre &gt; code
+    {
+    /* On screen, use an auto scroll box for long lines in a code block */
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto;
+    }
+}</code></pre>
+<p>code /* All inline code spans (applies to pre&gt;code as well) <em>/ { /</em> Pad a little from adjacent text */ padding-left: 0.3em; padding-right: 0.3em; padding-top: 0.1em; padding-bottom: 0.1em; border-radius: 3px; }</p>
+<p><span class="citation">@media</span> screen { code { box-shadow: inset 0px 0px 2px #bbb; } }</p>
+<p>pre &gt; code /* Code span in a code block <em>/ { /</em> Remove some styling on the span box */ padding: 0; border: none; border-radius: none; background-color: inherit; box-shadow: none; }</p>
+<p>code.url /* Pandoc simple URLs <em>/ { background-color: inherit; /</em> Un-color from previous rules */ box-shadow: none; }</p>
+<p>/* ---- Math ---- */</p>
+<p>span.math /* Pandoc inline math default and --jsmath inline math <em>/ { /</em> Tried font-style:italic here, and it messed up MathJax rendering in some browsers. Maybe don't mess with at all. */ }</p>
+<p>div.math /* Pandoc --jsmath display math */ { }</p>
+<p>span.LaTeX /* Pandoc --latexmathml math */ { }</p>
+<p>eq /* Pandoc --gladtex math */ { }</p>
+<p>/* ---- Tables ---- */</p>
+<p>/* A clean textbook-like style with horizontal lines above and below and under the header. Rows highlight on hover to help scanning the table on screen. */</p>
+<p>table { border-collapse: collapse; border-spacing: 0; /* IE 6 */</p>
+<pre><code>border-top:    2pt solid #000; /* The caption on top will not have a bottom-border */
+border-bottom: 2pt solid #000;
+
+/* Center */
+margin-left:  auto;
+margin-right: auto;
+}</code></pre>
+<p>thead, th /* Entire table header <em>/ { /</em> Well, we add th here since IE doesn't seem to respond to thead. This will work until we have multi-row headers. */ border-bottom: 1pt solid #000; background-color: #eee; }</p>
+<p>tr.header /* Each header row */ { }</p>
+<p>tbody /* Entire table body */ { }</p>
+<p>/* Table body rows */</p>
+<p>tr { }</p>
+<p>/* Odd and even rows */ tr.odd {} tr.even {}</p>
+<p>tr.odd:hover, tr.even:hover /* Use .odd and .even classes to avoid styling rows in other tables */ { background-color: #eee; }</p>
+<p>td, th /* Table cells and table header cells <em>/ { vertical-align: top; /</em> Word <em>/ vertical-align: baseline; /</em> Others */ padding-left: 0.5em; padding-right: 0.5em; padding-top: 0.2em; padding-bottom: 0.2em; }</p>
+<p>/* Removes padding on left and right of table for a tight look. Good if thead has no background color<em>/ /</em> tr td:last-child, tr th:last-child { padding-right: 0; } tr td:first-child, tr th:first-child { padding-left: 0; } */</p>
+<p>th /* Table header cells */ { font-weight: bold; }</p>
+<p>tfoot /* Table footer (what appears here if caption is on top?) */ { }</p>
+<p>caption /* This is for a table caption tag, not the p.caption Pandoc uses in a div.figure */ { caption-side: top; border: none; font-size: 0.9em; font-style: italic; text-align: center; margin-top: 0.5em; margin-bottom: 0.3em; padding-bottom: 0.2em; }</p>
+<p>/* ---- Definition lists ---- */</p>
+<p>dl /* The whole list */ { border-top: 2pt solid #888; padding-top: 0.5em; border-bottom: 2pt solid #888; }</p>
+<p>dt /* Definition term */ { font-weight: bold; }</p>
+<p>dd+dt /* 2nd or greater term in the list */ { border-top: 1pt solid #888; padding-top: 0.5em; }</p>
+<p>dd /* A definition */ { margin-bottom: 0.5em; }</p>
+<p>dd+dd /* 2nd or greater definition of a term <em>/ { border-top: 1px solid #888; /</em> To separate multiple definitions */ }</p>
+<p>/* ---- Footnotes ---- */</p>
+<p>a.footnote, a.footnoteRef { /* Pandoc, MultiMarkdown footnote links */ font-size: small; vertical-align: text-top; }</p>
+<p>a[href^=&quot;#fnref&quot;], a.reversefootnote /* Pandoc, MultiMarkdown, ?? footnote back links */ { }</p>
+<p><span class="citation">@media</span> print { a[href^=&quot;#fnref&quot;], a.reversefootnote /* Pandoc, MultiMarkdown <em>/ { /</em> Don't display these at all in print since the arrow is only something to click on */ display: none; } }</p>
+<p>div.footnotes /* Pandoc footnotes div at end of the document */ { }</p>
+<p>div.footnotes li[id^=&quot;fn&quot;] /* A footnote item within that div */ { }</p>
+<p>/* Fancy rule for footnotes section (from http://css-tricks.com/examples/hrs/) */</p>
+<p>div.footnotes &gt; hr { margin-top: 2em; padding: 0; border: none; border-top: double; border-color: #333; border-width: 3pt; color: #000; text-align: center; }</p>
+<p>div.footnotes &gt; hr:after { content: &quot;NOTES&quot;; display: inline-block; position: relative; top: -0.8em;<br />
+font-size: 0.8em; padding: 0 0.5em; background: white; }</p>
+<p>/* Convenience classes for DIVs or other things inserted into the Markdown */</p>
+<p>/* You can class stuff as &quot;noprint&quot; to not print. Useful since you can't set this media conditional inside an HTML element's style attribute (I think). */</p>
+<p><span class="citation">@media</span> screen { .noscreen /* Don't display on screen (something for print only) */ { display: none; } }</p>
+<p><span class="citation">@media</span> print { .noprint /* Don't display in print (something for screen only) */ { display:none; } }</p>
+<p>.block-center { margin-left: auto; margin-right: auto; display: table; } .text-center { text-align: center; }</p>
+<p>.block-right { margin-left: auto; margin-right: 0; display: table; } .text-right { text-align: right; }</p>
+<p>.block-left { margin-left: 0; margin-right: auto; display: table; } .text-left { text-align: left; }</p>
+</body>
+</html>

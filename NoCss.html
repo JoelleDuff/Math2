@@ -1,0 +1,22 @@
+<p>\documentclass{article} </p>
+<h1 id="assignment-from-seminar-economics-and-psychology-of-risk-and-time">Assignment from Seminar Economics and Psychology of Risk and Time</h1>
+<p>When choosing between uncertain alternatives, Mary maximizes cumulative prospect theory with a weighting (“source”) function for a ball drawn from an urn with a known composition of balls <span class="math inline"><em>K</em></span> equal to the weighting function for the performance of the Dow Jones index, both given by: <br /><span class="math display"><em>w</em><sub><em>K</em></sub>(<em>p</em>)=<em>w</em><sub><em>D</em><em>O</em><em>W</em></sub>(<em>p</em>)=<em>p</em><sup>2</sup></span><br /></p>
+<p>The weighting function for balls drawn from an urn with an unknown composition of colored balls <span class="math inline"><em>U</em></span>, as well as the weighting function for the performance of the AEX index are given by: <br /><span class="math display">$$w_U(p) = w_{AEX}(p) = \frac{p^{0.5}}{(p^{0.5}+(1-p)^{0.5})^2}$$</span><br /></p>
+<p>Mary’s utility function is <span class="math inline"><em>u</em>(<em>x</em>)=<em>x</em><sup>0.88</sup></span>.</p>
+<p><em>a) Show that Mary can be ambiguity seeking for unlikely events and ambiguity averse for events of moderate likelihood when comparing lotteries with prizes depending on balls drawn from either the risky or the unknown urn.</em></p>
+<pre><code>$p$     0   0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+$w_K$   &amp;0  &amp;0.01   &amp;0.04   &amp;0.09   &amp;0.16   &amp;0.25   &amp;0.36   &amp;0.49   &amp;0.64   &amp;0.81   &amp;1\\ \hline
+$w_U$   &amp;0  &amp;0.1976 &amp;0.2485 &amp;0.2858 &amp;0.3195 &amp;0.3536 &amp;0.3912 &amp;0.4366 &amp;0.4969 &amp;0.5929 &amp;1\\ \hline</code></pre>
+<p>The points from the table above create the following graph:</p>
+<p></p>
+<p>As we can see in unlikely events (when <span class="math inline"><em>p</em> &lt; 0.6</span>), Mary chooses the unknown composition, meaning that she is ambiguity seeking. For events with moderate or high probability (when <span class="math inline"><em>p</em> &gt; 0.6</span>) Mary is ambiguity averse by preferring the known composition.</p>
+<p><em>b) Show that Mary can exhibit the home bias, assuming that she believes that the Dow Jones index and the AEX index will go up (and down) with probability 0.5.</em></p>
+<p>Dow Jones Index increases</p>
+
+<p>\</p>
+<p>CPT(Dow Jones) = <span class="math inline">0.25 * <em>x</em><sup>0.88</sup></span></p>
+<p>AEX Index increases</p>
+
+<p>\</p>
+<p>CPT(AEX) = <span class="math inline">0.3536 * <em>x</em><sup>0.88</sup></span></p>
+<p>In the event that Mary gets and equal, positive payoff if any of the indexes increases, she will always prefer the AEX index. This demonstrates the home bias for Mary.</p>
